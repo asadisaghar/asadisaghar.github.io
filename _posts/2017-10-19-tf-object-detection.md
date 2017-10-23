@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Use tensorflow object detection API to find the RAM in my PC
+title: TF object detection to find the RAM module in my PC
 ---
 
 I've been trying to train an object detection model to detect parts of a PC when looking at it. The idea is to constantly monitor this and keep track of part removal, replacement etc. There are many ways to do this, but I have some limitations as well, I strictly want to be able to do everything from python and I want to be able to train my model using the local CPU cluster I have available. After some research on different ways of doing this and the various frameworks and algorithms out there, I came across what might be my best shot; [TensorFlow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). This comes with a really good set of tutorials that I followed. However, before getting to the point to use this API, I needed to make some labeled data. My googling around, concluded that there is no easy way of doing it. There are only semi-automated software to do the labeling but all of them consist some few hours of manual labor for the smallest dataset required to train a single-class model, and if it becomes anything more than a prototype or a personal fun project, outsourcing is always as option! So let's start by how I did it for this project.
