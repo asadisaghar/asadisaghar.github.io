@@ -49,34 +49,3 @@ Now that we have a trained checkpoint, let's see how well the model has learned 
 ![test set labeled by the trained model](../images/2017-10-19-pdm/results.png)
 
 It doesn't look that badm. Althought there is so much room for improvement. The model has picked uop the shape and form of a RAM module, but since it has never seen any negatively-labeled images, it detects the text box similar to those on the label of one of the training images as a RAM module too, or the motherboard labeld ram. So, the next step would be to feed more, better-labeled data to the same chack point and include some false images as well. I believe this is only a problem with single-class object detection though...
-
-
-
-[//]: # (model training:
-´´´
-# From tensorflow/models/research/
-python object_detection/train.py --logtostderr --pipeline_config_path=/home/saghar/PCguts/PCparts/models/model/ssd_mobilenet_v1_coco.config --train_dir=/home/saghar/PCguts/PCparts/models/model/train/
-´´´
-
-model evaluation:
-´´´
-# From tensorflow/models/research/
-python object_detection/eval.py --logtostderr --pipeline_config_path=/home/saghar/PCguts/PCparts/models/model/ssd_mobilenet_v1_coco.config --checkpoint_dir=/home/saghar/PCguts/PCparts/models/model/train/ --eval_dir=/home/saghar/PCguts/PCparts/models/model/eval/
-´´´
-
-run tensorboard, sit back and watch (for days!)
-´´´
-# From tensorflow/models/research/
-tensorboard --logdir=/home/saghar/PCguts/PCparts/models/model/
-´´´
-
-export the trained model (or a specific checkpoint) to use for inference
-´´´
-# From tensorflow/models/research/
-python object_detection/export_inference_graph.py \
-  --input_type image_tensor \
-  --pipeline_config_path /home/saghar/PCguts/PCparts/models/model/ssd_mobilenet_v1_coco.config \
-  --trained_checkpoint_prefix /home/saghar/PCguts/PCparts/models/model/train/model.ckpt-7125 \
-  --output_directory /home/saghar/PCguts/PCparts/output_inference_graph.pb
-´´´
-)
