@@ -18,7 +18,7 @@ I've been trying to train an object detection model to detect parts of a PC when
   * In real life we might want to spend some money and outsource it using , for example, [LabelMe](http://labelme2.csail.mit.edu/Release3.0/browserTools/php/mechanical_turk.php)
 
 Here is a collection of images I used with the boxes.
-![Sample of -manually- labeled data](../images/2017-10-19-pdm/labeled_data.png)
+![Sample of -manually- labeled data](../images/2017-10-19-tf-object-detection/labeled_data.png)
 
 I probably should have been more consistent in drawing the boxes for images with perspective, but this was something I thought of after having labeled more than half of my photos, so I didn't go back to fix anything!
 
@@ -40,12 +40,12 @@ The only obstacle I faced in using a pre-trained checkpoint was that I tried to 
 
 I trained the model on my local machine, and even though the loss drop down to ~3 in about 1000 epochs already, the rest of my [overnight] training (for another 6k epochs or so) didn't manage to improve the loss by much.
 
-![TotalLoss (training set)](../images/2017-10-19-pdm/TotalLoss.png)
-![Precision (training set)](../images/2017-10-19-pdm/Precision.png)
+![TotalLoss (training set)](../images/2017-10-19-tf-object-detection/TotalLoss.png)
+![Precision (training set)](../images/2017-10-19-tf-object-detection/Precision.png)
 
 ### Evaluate the performance
 
 Now that we have a trained checkpoint, let's see how well the model has learned to detect memory modules in a PC.
-![test set labeled by the trained model](../images/2017-10-19-pdm/results.png)
+![test set labeled by the trained model](../images/2017-10-19-tf-object-detection/results.png)
 
 It doesn't look that badm. Althought there is so much room for improvement. The model has picked uop the shape and form of a RAM module, but since it has never seen any negatively-labeled images, it detects the text box similar to those on the label of one of the training images as a RAM module too, or the motherboard labeld ram. So, the next step would be to feed more, better-labeled data to the same chack point and include some false images as well. I believe this is only a problem with single-class object detection though...
