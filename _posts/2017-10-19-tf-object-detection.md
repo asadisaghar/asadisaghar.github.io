@@ -5,7 +5,7 @@ title: Use tensorflow object detection API to find the RAM in my PC
 
 I've been trying to train an object detection model to detect parts of a PC when looking at it. The idea is to constantly monitor this and keep track of part removal, replacement etc. There are many ways to do this, but I have some limitations as well, I strictly want to be able to do everything from python and I want to be able to train my model using the local CPU cluster I have available. After some research on different ways of doing this and the various frameworks and algorithms out there, I came across what might be my best shot; [TensorFlow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection). This comes with a really good set of tutorials that I followed. However, before getting to the point to use this API, I needed to make some labeled data. My googling around, concluded that there is no easy way of doing it. There are only semi-automated software to do the labeling but all of them consist some few hours of manual labor for the smallest dataset required to train a single-class model, and if it becomes anything more than a prototype or a personal fun project, outsourcing is always as option! So let's start by how I did it for this project.
 
-#### Collect and annotate training data
+### Collect and annotate training data
 
 1- Scrape the web for images of interesting parts/pieces in as many light conditions and from as many angles as possible (especially including in an assembled machine) - I did this by hand, and for a single PC part only. Since I am only making a prototype project and testing if it is going to work at all!
 
@@ -26,7 +26,7 @@ A couple hours later, I have a dataset of ~130 annotated photo and can move on t
 
 In fact, I found the data labeling step so tedious and inefficient that I ended up writing a little object tracker to do the job for me.
 
-#### Train the model
+### Train the model
 
 Tensorflow - like all other object detection frame works - has come up with its own -binary- format for annotation/labels. Fortunately, there is a [tutorial](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/preparing_inputs.md) on how to make these records from two common annotation formats. Since I got to know about the tf object detection API by [this blog post](https://medium.com/towards-data-science/how-to-train-your-own-object-detector-with-tensorflows-object-detector-api-bec72ecfe1d9) to begin with, I used some of his tools as well.
 
