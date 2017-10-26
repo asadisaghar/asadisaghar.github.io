@@ -24,7 +24,7 @@ I probably should have been more consistent in drawing the boxes for images with
 
 A couple hours later, I have a dataset of ~130 annotated photo and can move on to the more fun part.
 
-In fact, I found the data labeling step so tedious and inefficient that I ended up writing a little object tracker to do the job for me.
+In fact, I found the data labeling step so tedious and inefficient that I ended up writing [a little object tracker](https://asadisaghar.github.io/video-labeler/) to do the job for me.
 
 ### Train the model
 
