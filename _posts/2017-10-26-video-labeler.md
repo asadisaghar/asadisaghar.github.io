@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generate annotated data using OpenCV object tracker
+title: Label images using OpenCV object tracker
 ---
 
 Everyone knows how lazy I am at doing repetitive stuff, to the point that the mere thought of annotating several hundred images [per class] for the object detection project was about to jeopardize the entire project I was so excited about... that, until one day over lunch when I was complaining to my colleague and he said: "but why don't you have the OpenCV object tracker you've been using for another project to label video frames for you?". Why did I not think about it before? So, I started looking for a labeling tool to do this for me.  A couple hours and a few blog posts and tools that were doing only part of the job, I decided that I have spent more time googling than it takes ton actually build the thing. I added the keyboard interactions along the way, as I started using it and needed a little more functionality, but the core took less than an hour to write...and then I had to push myself for a few more days before I started writing about it!
