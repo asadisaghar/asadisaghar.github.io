@@ -23,11 +23,11 @@ import argparse
 import time
 
 def read_bboxes(image):
-    # choose the corners (or edges) of the tracking bbox
-    bbox1 = cv2.selectROI('tracking', image)
-    bbox2 = cv2.selectROI('tracking', image)
-    bbox3 = cv2.selectROI('tracking', image)
-    bbox4 = cv2.selectROI('tracking', image)
-    return bbox1, bbox2, bbox3, bbox4
+  # choose the corners (or edges) of the tracking bbox
+  bbox1 = cv2.selectROI('tracking', image)
+  bbox2 = cv2.selectROI('tracking', image)
+  bbox3 = cv2.selectROI('tracking', image)
+  bbox4 = cv2.selectROI('tracking', image)
+  return bbox1, bbox2, bbox3, bbox4
 
 ```
