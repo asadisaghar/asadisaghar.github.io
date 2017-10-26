@@ -13,7 +13,7 @@ Now about the video labeler. What it does is, it accepts the path to your video,
 
 This is a tool I am using heavily these days, so it's still very much a work in progress. I would like to make a more user friendly interface for it and many other ideas, but for now it is what it is and it makes my life (or annotating training set images) much easier.
 
-´´´
+
 	from math import *
 	import numpy as np
 	import cv2
@@ -171,5 +171,5 @@ This is a tool I am using heavily these days, so it's still very much a work in 
 	cv2.destroyAllWindows()
 	writer.release()
 	flabels.close()
-´´´
+
 
