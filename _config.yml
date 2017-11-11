@@ -61,5 +61,8 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+ 
+# Google Analytics
+google_analytics: UA-71976719-3 
 
 theme: jekyll-theme-midnight
