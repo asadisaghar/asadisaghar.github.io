@@ -123,7 +123,7 @@ It doesn't look that bad. Although there is so much room for improvement. The mo
           name: 'class label'
         }
         
-  - As of now, you also need to modify function __class_text_to_int__ in __generate_tfrecord.py__ to match the class name as well (__FIXME!__)        
+  - As of now, you also need to modify function __class_text_to_int__ in __generate_tfrecord.py__ to match the class name as well.        
 
   - Then run the following for  __train_label.csv__ and __test_label.csv__ to convert them to TFrecords (the format TF expects to read image labels)
   
