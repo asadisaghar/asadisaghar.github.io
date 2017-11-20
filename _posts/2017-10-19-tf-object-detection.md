@@ -52,6 +52,8 @@ It doesn't look that bad. Although there is so much room for improvement. The mo
 
 ### A concise to-do list:
 
+Follow the updates on the following to-do list and relevant scripts [here](https://github.com/innovationgarage/train-tf-object-detection)
+
 ## 1. Label images 
 
   - If you are using a pre-labeled dataset, you may have to jump forward to one of the steps between 2 to 6 depending on the format of the labels
